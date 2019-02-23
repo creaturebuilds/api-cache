@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src/",
+    "outDir": "dist",
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": false,
+    "removeComments": true,
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/*.ts",
+    "src/**/*.ts",
+    "test/*.ts",
+    "test/**/*.ts"
+  ],
+  "rules": {
+    "no-default-export": false
+  }
+}

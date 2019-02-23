@@ -1,9 +1,10 @@
 {
-  "name": "api-cache",
+  "name": "@creaturebuilds/api-cache",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/tsc",
     "test": "./node_modules/.bin/jest"
   },
   "author": "Creature Builds <support@creaturebuilds.com>",
@@ -45,7 +46,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test",
+      "pre-commit": "npm run test && npm run build",
       "pre-push": "npm run test"
     }
   }
