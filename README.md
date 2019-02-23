@@ -4,6 +4,13 @@
 
 A module for wrapping Creature API methods with cached versions.
 
+## Installation
+
+Run:
+```bash
+$ npm install --save @creaturebuilds/api-cache
+```
+
 ## Usage
 
 To wrap an API class or object, start by creating a new store using a Redis client.
@@ -62,6 +69,6 @@ Now `CachedUserAPI` will return cached users with a time to live of 5 minutes be
 ## Testing
 
 Tests will automatically run before committing and pushing. To run tests manually, simply run:
-```
-npm run test
+```bash
+$ npm run test
 ```
