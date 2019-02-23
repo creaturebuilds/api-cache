@@ -23,7 +23,7 @@
   },
   "jest": {
     "modulePathIgnorePatterns": [
-      "<rootDir>/build/"
+      "<rootDir>/dist/"
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
@@ -35,7 +35,7 @@
     "collectCoverage": false,
     "coveragePathIgnorePatterns": [
       "node_modules/",
-      "<rootDir>/build/"
+      "<rootDir>/dist/"
     ],
     "coverageReporters": [
       "test"
