@@ -56,3 +56,10 @@ const CachedUserAPI = apiCache.cachify(UserAPI, 'UserAPI', {
 ```
 
 Now `CachedUserAPI` will return cached users with a time to live of 5 minutes before refreshing the data.
+
+## Testing
+
+Tests will automatically run before committing and pushing. To run tests manually, simply run:
+```
+npm run test
+```
