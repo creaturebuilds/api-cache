@@ -14,23 +14,17 @@
  * permissions and limitations under the License.
  */
 
-export interface Store {
-  getJSON: Function;
-  setJSON: Function;
-};
+class MockStore {
+  getJSONMock = jest.fn();
+  setJSONMock = jest.fn();
 
-export interface MethodConfig {
-  method: Function,
-  cacheKey: string,
-  expiresAt: number|null,
-};
+  getJSON(...args) {
+    return this.getJSONMock(...args);
+  }
 
-export interface MethodConfigParams {
-  ttl: string;
-  useContext: boolean;
-};
+  setJSON(...args) {
+    return this.setJSONMock(...args);
+  }
+}
 
-export interface RedisClient {
-  get: Function;
-  set: Function;
-};
+export default MockStore;

@@ -4,13 +4,49 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jest"
   },
-  "author": "Joshua Burgin <hi@joshburgin.io> (https://joshburgin.io)",
-  "license": "MIT",
+  "author": "Creature Builds <support@creaturebuilds.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ms": "^2.1.1"
+  },
   "devDependencies": {
+    "@types/jest": "^24.0.6",
     "@types/node": "^11.9.5",
     "@types/redis": "^2.8.10",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build/"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "collectCoverage": false,
+    "coveragePathIgnorePatterns": [
+      "node_modules/",
+      "<rootDir>/build/"
+    ],
+    "coverageReporters": [
+      "test"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{ts,js}"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm run test"
+    }
   }
 }
