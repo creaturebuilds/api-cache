@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/creaturebuilds/api-cache.svg?branch=master)](https://travis-ci.org/creaturebuilds/api-cache)
+
 # api-cache
 
 A module for wrapping Creature API methods with cached versions.
