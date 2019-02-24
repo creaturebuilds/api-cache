@@ -132,3 +132,4 @@ var ApiCache = (function () {
     return ApiCache;
 }());
 exports.default = ApiCache;
+//# sourceMappingURL=api-cache.js.map

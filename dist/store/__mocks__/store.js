@@ -22,3 +22,4 @@ var MockStore = (function () {
     return MockStore;
 }());
 exports.default = MockStore;
+//# sourceMappingURL=store.js.map
